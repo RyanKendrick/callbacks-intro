@@ -1,11 +1,15 @@
+// SIMPLIFIED SOLUTION
 // The second argument/parameter is expected to be a function
 function findWaldo(arr, found) {
-  for (var i = 0; i < arr.length; i++) {
+  // refactored to use forEach loop instead of for loop
+  // arr.forEach(function("first parameter represents the array element that the loop is on",
+  // second element refers to the index of the element",
+  //"third element (optional) refers to entire array that element belongs to"))
+  arr.forEach(function(name, i) {
     if (arr[i] === "Waldo") {
-      // sets Waldo's index as a variable "index"
       found(i);  // execute callback
-    }
-  }
+      }
+  });
 }
 
 
